@@ -1,4 +1,4 @@
-module ConfigMapper where
+module ConfigMapper (invertMap) where
 
 import Data.Map (Map)
 import Data.Map qualified as M
@@ -28,6 +28,33 @@ convertTuple (k2, v, k1) = (k2, M.singleton v [k1])
 combineTuples :: (Ord k2, Ord v, Ord k1) => [InvertedConfigMapValue k1 k2 v] -> InvertedConfigMap k2 v k1
 combineTuples = M.fromListWith (M.unionWith (++))
 
--- Invert the map
+-- | The invertMap function takes a ConfigMap and returns an InvertedConfigMap
+-- Example:
+-- Given the following ConfigMap:
+-- @
+-- {
+--   "serviceOne": {
+--     "DB_PASSWORD": "foo"
+--     "SHARED_KEY":  "xyz"
+--   },
+--   "serviceTwo": {
+--     "DB_PASSWORD": "bar"
+--     "SHARED_KEY":  "xyz"
+--   }
+-- }
+-- @
+--
+-- The invertMap function will return:
+-- @
+-- {
+--   "DB_PASSWORD": {
+--     "foo": ["serviceOne"],
+--     "bar": ["serviceTwo"]
+--   },
+--   "SHARED_KEY": {
+--     "xyz": ["serviceOne", "serviceTwo"]
+--   }
+-- }
+-- @
 invertMap :: (Ord k1, Ord k2, Ord v) => ConfigMap k1 k2 v -> InvertedConfigMap k2 v k1
 invertMap = combineTuples . map convertTuple . toListOfTuples
