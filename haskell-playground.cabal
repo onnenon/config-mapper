@@ -70,8 +70,11 @@ executable haskell-playground
 
   -- Other library packages from which modules are imported.
   build-depends:
-    , base  ^>=4.19.1.0
-    , mtl   ^>=2.3.1
+    , aeson       ^>=2.2.3.0
+    , base        ^>=4.19.1.0
+    , bytestring  ^>=0.12.1.0
+    , containers  ^>=0.6.8
+    , mtl         ^>=2.3.1
 
   -- Directories containing source files.
   hs-source-dirs:   app
