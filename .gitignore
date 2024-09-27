@@ -1,0 +1,43 @@
+# Ignore the .stack-work directory, which contains build artifacts
+.stack-work/
+
+# Ignore Cabal build artifacts
+dist/
+dist-*/
+
+# Ignore Cabal sandbox directory
+cabal.sandbox.config
+.cabal-sandbox/
+
+# Ignore Haskell interface files
+*.hi
+
+# Ignore Haskell object files
+*.o
+*.a
+
+# Ignore Haskell executable files
+*.exe
+
+# Ignore Haskell REPL history
+.ghci_history
+
+# Ignore Haskell tags
+.tags
+TAGS
+
+# Ignore Haskell IDE files
+*.hie
+*.hie-bios
+*.hie-bios.cache
+*.hie-bios.log
+*.hie-bios.yaml
+
+# Ignore Haskell test coverage files
+.hpc/
+
+# Ignore Haskell stack configuration files
+.stack-work/
+.stack/
+.stack-work.yaml
+.stack.yaml.lock
