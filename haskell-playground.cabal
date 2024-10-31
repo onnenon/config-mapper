@@ -12,7 +12,7 @@ common warnings
 
 library config-mapper
   import:           warnings
-  exposed-modules:  ConfigMapper
+  exposed-modules:  ConfigMapper, Sandbox
   hs-source-dirs:   src
   build-depends:
     , base        ^>=4.19.1.0
