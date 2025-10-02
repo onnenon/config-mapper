@@ -190,12 +190,6 @@ Config files should be valid JSON with flat key-value pairs where values are str
 }
 ```
 
-**Note**: Nested objects and non-string values are not currently supported.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ### Development Workflow
 
 1. Fork the repository
