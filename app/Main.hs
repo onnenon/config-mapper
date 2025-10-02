@@ -1,6 +1,6 @@
 module Main where
 
-import Control.Lens (at, ix, (%~), (&), _Just)
+import Control.Lens (at, (%~), (&), _Just)
 import Data.Aeson (decode, encode, toJSON)
 import Data.ByteString.Lazy qualified as BL
 import Data.Map.Strict (Map)
