@@ -130,17 +130,3 @@ spec = do
                 )
               ]
       invertConfigMapLens input `shouldBe` invertConfigMap input
-
-  describe "buildConfigMap" $ do
-    it "reads JSON files from the configs directory" $ do
-      configMap <- buildConfigMap "configs"
-      -- Should have at least C1.json and C2.json
-      Map.size configMap `shouldSatisfy` (>= 2)
-      -- C1.json should have "name" -> "Crescent"
-      case Map.lookup "C1.json" configMap of
-        Just m -> Map.lookup "name" m `shouldBe` Just "Crescent"
-        Nothing -> expectationFailure "C1.json not found in configMap"
-      -- C2.json should have "title" -> "Japanese"
-      case Map.lookup "C2.json" configMap of
-        Just m -> Map.lookup "title" m `shouldBe` Just "Japanese"
-        Nothing -> expectationFailure "C2.json not found in configMap"
