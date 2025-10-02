@@ -16,7 +16,6 @@ jobs:
       - name: Setup Ormolu
         uses: haskell-actions/run-ormolu@v16
         with:
-          version: "0.7.4.0"
           mode: check
           pattern: |
             src/**/*.hs
