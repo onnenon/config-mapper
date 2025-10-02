@@ -11,7 +11,7 @@ jobs:
     name: Format Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Ormolu
         uses: haskell-actions/run-ormolu@v17
@@ -26,7 +26,7 @@ jobs:
     name: Lint (HLint)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup HLint
         uses: haskell-actions/hlint-setup@v2
@@ -49,7 +49,7 @@ jobs:
         cabal: ["3.10"]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Haskell
         uses: haskell-actions/setup@v2
