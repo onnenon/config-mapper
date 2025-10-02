@@ -42,4 +42,5 @@ TAGS
 .stack-work.yaml
 .stack.yaml.lock
 
-**/*.json
+*.json
+.DS_STORE
