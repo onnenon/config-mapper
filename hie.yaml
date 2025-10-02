@@ -1,0 +1,10 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:config-mapper"
+
+    - path: "app/Main.hs"
+      component: "config-mapper:exe:config-mapper"
+
+    - path: "test"
+      component: "config-mapper:test:config-mapper-test"
