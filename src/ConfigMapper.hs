@@ -1,5 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 module ConfigMapper
   ( -- * Types
     ConfigMap,
