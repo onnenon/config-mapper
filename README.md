@@ -210,18 +210,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ✍️ Author
-
-**Stephen Onnen** - [onnenon](https://github.com/onnenon)
-
-## 🙏 Acknowledgments
-
-Built with Haskell and the following excellent libraries:
-
-- [aeson](https://hackage.haskell.org/package/aeson) - Fast JSON parsing
-- [lens](https://hackage.haskell.org/package/lens) - Composable functional references
-- [hspec](https://hackage.haskell.org/package/hspec) - Behavior-driven testing
-
 ---
 
 For more detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md).
