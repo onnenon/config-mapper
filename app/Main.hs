@@ -57,4 +57,4 @@ invertConfigMapLens = Map.foldrWithKey' processFile Map.empty
         -- Create/update the inner map entry for the value, ensuring it exists
         & at key . _Just . at value %~ Just . fromMaybe []
         -- Append the fileName to the list
-        & at key . _Just . ix value %~ (fileName :)
+        & at key . _Just . at value %~ Just . maybe [fileName] (fileName :)
