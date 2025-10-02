@@ -1,4 +1,4 @@
-# Revision history for haskell-playground
+# Revision history for haskell-test
 
 ## 0.1.0.0 -- YYYY-mm-dd
 
