@@ -1,0 +1,15 @@
+# HLint configuration file
+# See: https://github.com/ndmitchell/hlint#customization
+
+# Ignore specific warnings or hints
+- ignore: { name: "Use camelCase" } # If you prefer snake_case or other styles
+- ignore: { name: "Redundant do" } # Sometimes explicit do is clearer
+
+# You can add custom rules here
+# - warn: {lhs: "map f (map g xs)", rhs: "map (f . g) xs"}
+
+# Module-specific ignores
+# - ignore: {name: "Use infix", within: ConfigMapper}
+
+# Severity levels: ignore, suggest, warn, error
+# Default is 'warn' for most hints

@@ -1,0 +1,11 @@
+# Ormolu configuration
+# See https://github.com/tweag/ormolu#configuration
+
+# Column limit for code formatting
+column-limit: 100
+# Use default extensions from GHC2021
+# (These are inherited from your cabal file's default-language setting)
+
+# Additional language extensions (if needed beyond GHC2021)
+# ghc-opt:
+#   - -XImportQualifiedPost
